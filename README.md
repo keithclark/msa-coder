@@ -1,2 +1,3 @@
 # msa-coder
-JavaScipt mdoule for encoding and decoding Magic Shadow Archiver data.
+
+A JavaScript module for encoding and decoding Magic Shadow Archiver data.
