@@ -23,21 +23,23 @@ readFile('mydisk.msa', (err, buffer) => {
 });
 ```
 
-## `decode()`
+## Documentation
 
-Parses an `arrayBuffer` containing MSA data structure and returns an object describing the original disk format and the decoded data in a `Uint8Array`.
+### `decode()`
 
-### Syntax
+Parses an `arrayBuffer` containing MSA data structure and returns an object describing the original disk format and the decoded data.
+
+#### Syntax
 ```js
 const disk = decode(inputBuffer);
 ```
 
-### Arguments
+#### Arguments
 Argument | Type | Description
 -|-|-
  `inputBuffer` | arrayBuffer | A buffer containing MSA encoded data.
 
-### Result
+#### Result
 
 ```js
 {
@@ -56,6 +58,6 @@ Property | Type | Description
 `format` | Object | The disk format.
 `format.sectorsPerTrack` | Number | Number of sectors on the original disk.
 `format.sides` | Number | Number of sides (0-based) on the original disk.
-`format.firstEncodedTrack` | Number | The first track on the original disk that this archive was read from.
-`format.lastEncodedTrack` | Number | The last track on the original disk that this archive was read from.
+`format.firstEncodedTrack` | Number | The first track on the original disk that this archive was read from. (0-based)
+`format.lastEncodedTrack` | Number | The last track on the original disk that this archive was read from. (0-based)
 `data` | Uint8Array | Decoded data.
